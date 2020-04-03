@@ -14,12 +14,12 @@ public class GameService {
         this.gameManager = gameManager;
     }
 
-    public JokenpoEnum solvePlay(String firstPlay, String secondPlay) {
+    public JokenpoEnum solveWinner(String firstPlay, String secondPlay) {
         var firstPlayEnum = JokenpoEnum.fromDescription(StringUtils.lowerCase(firstPlay));
         var secondPlayEnum = JokenpoEnum.fromDescription(StringUtils.lowerCase(secondPlay));
 
         var solver = gameManager.getSolver(firstPlayEnum);
 
-        return solver.solve(secondPlayEnum);
+        return solver.solveWinner(secondPlayEnum);
     }
 }

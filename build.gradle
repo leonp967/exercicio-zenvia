@@ -35,3 +35,7 @@ dependencies {
     testCompile group: 'org.hamcrest', name: 'hamcrest', version: hamcrestVersion
 }
 
+test {
+    useJUnitPlatform()
+}
+

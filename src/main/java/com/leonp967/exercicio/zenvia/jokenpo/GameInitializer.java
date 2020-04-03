@@ -20,6 +20,6 @@ public class GameInitializer {
     }
 
     public JokenpoEnum play(String playerOne, String playerTwo) {
-        return gameService.solvePlay(playerOne, playerTwo);
+        return gameService.solveWinner(playerOne, playerTwo);
     }
 }

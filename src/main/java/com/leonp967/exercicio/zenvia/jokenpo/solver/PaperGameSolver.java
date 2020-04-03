@@ -7,14 +7,14 @@ import org.springframework.stereotype.Component;
 public class PaperGameSolver implements GameSolver {
 
     @Override
-    public JokenpoEnum solve(JokenpoEnum opponent) {
+    public JokenpoEnum solveWinner(JokenpoEnum opponent) {
         switch (opponent) {
             case ROCK:
                 return JokenpoEnum.PAPER;
             case PAPER:
                 return JokenpoEnum.DRAW;
-            case SCISSOR:
-                return JokenpoEnum.SCISSOR;
+            case SCISSORS:
+                return JokenpoEnum.SCISSORS;
             default:
                 throw new IllegalArgumentException("Feature not yet implemented into the game!");
         }

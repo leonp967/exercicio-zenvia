@@ -4,7 +4,7 @@ import com.leonp967.exercicio.zenvia.jokenpo.model.JokenpoEnum;
 import com.leonp967.exercicio.zenvia.jokenpo.solver.GameSolver;
 import com.leonp967.exercicio.zenvia.jokenpo.solver.PaperGameSolver;
 import com.leonp967.exercicio.zenvia.jokenpo.solver.RockGameSolver;
-import com.leonp967.exercicio.zenvia.jokenpo.solver.ScissorGameSolver;
+import com.leonp967.exercicio.zenvia.jokenpo.solver.ScissorsGameSolver;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,18 +12,18 @@ public class GameManager {
 
     private final PaperGameSolver paperGameSolver;
     private final RockGameSolver rockGameSolver;
-    private final ScissorGameSolver scissorGameSolver;
+    private final ScissorsGameSolver scissorsGameSolver;
 
-    public GameManager(PaperGameSolver paperGameSolver, RockGameSolver rockGameSolver, ScissorGameSolver scissorGameSolver) {
+    public GameManager(PaperGameSolver paperGameSolver, RockGameSolver rockGameSolver, ScissorsGameSolver scissorsGameSolver) {
         this.paperGameSolver = paperGameSolver;
         this.rockGameSolver = rockGameSolver;
-        this.scissorGameSolver = scissorGameSolver;
+        this.scissorsGameSolver = scissorsGameSolver;
     }
 
     public GameSolver getSolver(JokenpoEnum item) {
         switch (item) {
-            case SCISSOR:
-                return scissorGameSolver;
+            case SCISSORS:
+                return scissorsGameSolver;
             case ROCK:
                 return rockGameSolver;
             case PAPER:

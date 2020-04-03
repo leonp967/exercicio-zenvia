@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public enum JokenpoEnum {
 
-    SCISSOR("scissor"),
+    SCISSORS("scissors"),
     PAPER("paper"),
     ROCK("rock"),
     DRAW("draw");
