@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 
@@ -58,6 +60,14 @@ class GameServiceTest {
         JokenpoEnum winner = gameService.solveWinner("scissors", "scissors");
 
         assertThat(winner, is(JokenpoEnum.DRAW));
+    }
+
+    @Test
+    public void shouldReturnError() {
+        Throwable error = assertThrows(IllegalArgumentException.class, () -> gameService.solveWinner("scissors", "asdght"));
+
+        assertNotNull(error);
+        assertThat(error.getMessage(), is("A player chose an invalid play!"));
     }
 
 }

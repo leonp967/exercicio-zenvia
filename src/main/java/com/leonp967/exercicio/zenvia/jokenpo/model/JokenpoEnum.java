@@ -16,6 +16,7 @@ public enum JokenpoEnum {
     }
 
     public static JokenpoEnum fromDescription(String description) {
-        return Arrays.stream(values()).filter(joken -> joken.description.equals(description)).findFirst().orElse(null);
+        return Arrays.stream(values()).filter(joken -> joken.description.equals(description)).findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("A player chose an invalid play!"));
     }
 }
