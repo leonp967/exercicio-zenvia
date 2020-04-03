@@ -1,7 +1,7 @@
 # Exercício técnico - Zenvia
 
 ## Problema escolhido
-O problema escolhido foi o do [Jokenpo] (http://dojopuzzles.com/problemas/exibe/jokenpo/).
+O problema escolhido foi o do [Jokenpo](http://dojopuzzles.com/problemas/exibe/jokenpo/).
 
 
 ## Solução implementada
